@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="weatherapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gXs-86-g9B">
+                                <rect key="frame" x="16" y="71" width="288" height="497"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a city" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tih-Ug-od1">
+                                <rect key="frame" x="16" y="28" width="215" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="215" id="M7V-qW-Wx4"/>
+                                    <constraint firstAttribute="height" constant="30" id="XYE-8T-2rw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ab8-Od-QnF">
+                                <rect key="frame" x="239" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8JF-Ke-Wi0"/>
+                                    <constraint firstAttribute="width" constant="30" id="XJ8-uf-Upp"/>
+                                </constraints>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="andGo:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Z6-eT-hhA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tih-Ug-od1" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="1vA-Zo-vkq"/>
+                            <constraint firstItem="tih-Ug-od1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="c1o-RH-gb5"/>
+                            <constraint firstItem="gXs-86-g9B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hc5-dQ-vgx"/>
+                            <constraint firstItem="Ab8-Od-QnF" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="hlI-je-cfh"/>
+                            <constraint firstItem="Ab8-Od-QnF" firstAttribute="leading" secondItem="tih-Ug-od1" secondAttribute="trailing" constant="8" id="wAf-nT-WnP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gXs-86-g9B" secondAttribute="trailing" id="xSe-jA-2yu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="city" destination="tih-Ug-od1" id="Uag-LR-XnD"/>
+                        <outlet property="webView" destination="gXs-86-g9B" id="inY-re-SnX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
